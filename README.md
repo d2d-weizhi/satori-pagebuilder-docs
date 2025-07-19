@@ -64,4 +64,4 @@ This project is the **dedicated documentation portal** for [Satori PageBuilder](
 
 | Sprint  | Sprint Title                                   | Status   |
 |---------|------------------------------------------------|----------|
-| 1.0     | [Laying the Groundwork for Docs Portal](/docs/sprints/sprint-1.0.md#laying-the-groundwork-for-docs-portal) | Done     |
+| 1.0     | [Laying the Groundwork for Docs Portal](https://github.com/d2d-weizhi/satori-pagebuilder-docs/blob/master/docs/sprints/sprint-1.0.md) | Done     |
