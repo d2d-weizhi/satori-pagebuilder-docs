@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import Image from "next/image";
+import { Roboto, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const robotoSans = Roboto({
+  variable: "--font-roboto-sans",
   subsets: ["latin"],
 });
 
@@ -25,9 +26,49 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${robotoSans.variable} ${geistMono.variable} antialiased bg-gray-50 dark:bg-neutral-950`}
       >
-        {children}
+        <div className="min-h-screen flex flex-row">
+          {/* Sidebar */}
+          <aside className="w-64 bg-white dark:bg-neutral-900 border-r border-gray-200 dark:border-neutral-800 flex flex-col items-center py-6 px-4 gap-6">
+            {/* Logo (put your lotus SVG here, or temporary text) */}
+            <div className="mb-8 flex items-center justify-start gap-4">
+              <Image
+                src="/satori-pb-logo.png"
+                alt="Satori PageBuilder Logo"
+                width={64}
+                height={64}
+                unoptimized
+                className="rounded-md"
+              />
+              <span
+                className="text-lg font-medium text-gray-700"
+                style={{ letterSpacing: "1px" }}
+              >
+                Satori PageBuilder
+              </span>
+            </div>
+            {/* Navigation */}
+            <nav className="w-full flex-1 flex flex-col gap-2">
+              {/* Replace these with your menu sections */}
+              <a href="#" className="px-3 py-2 rounded hover:bg-gray-100 dark:hover:bg-neutral-800 font-medium">
+                Welcome
+              </a>
+              <a href="#" className="px-3 py-2 rounded hover:bg-gray-100 dark:hover:bg-neutral-800 font-medium">
+                Changelogs
+              </a>
+              <a href="#" className="px-3 py-2 rounded hover:bg-gray-100 dark:hover:bg-neutral-800 font-medium">
+                Quick Start
+              </a>
+              {/* ...etc */}
+            </nav>
+            {/* (Later: Version Selector Dropdown Here) */}
+          </aside>
+          {/* Content Area */}
+          <main className="flex-1 flex flex-col items-stretch px-8 py-10">
+            {children}
+          </main>
+        </div>
       </body>
     </html>
   );
