@@ -10,6 +10,7 @@ interface InterfaceDetailPageProps {
   };
 }
 
+/* eslint-disable  @typescript-eslint/no-explicit-any */
 export default async function InterfaceDetailPage({ params }: InterfaceDetailPageProps) {
   const iface = await getInterfaceBySlug(params.slug);
 

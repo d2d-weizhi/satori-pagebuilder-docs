@@ -3,6 +3,7 @@ import Link from "next/link";
 import he from "he";
 import { getAllEntities } from "@/lib/data";
 
+/* eslint-disable  @typescript-eslint/no-explicit-any */
 export default async function ApiReferencePage() {
   const entities = await getAllEntities();
 

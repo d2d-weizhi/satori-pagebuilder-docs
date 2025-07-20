@@ -2,6 +2,7 @@ import Link from "next/link";
 import he from "he";
 import { getAllInterfaces } from "@/lib/data";
 
+/* eslint-disable  @typescript-eslint/no-explicit-any */
 export default async function InterfacesPage() {
   const interfaces = await getAllInterfaces();
 
