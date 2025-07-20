@@ -62,6 +62,7 @@ This project is the **dedicated documentation portal** for [Satori PageBuilder](
 
 ## Development History
 
-| Sprint  | Sprint Title                                   | Status   |
-|---------|------------------------------------------------|----------|
+| Sprint  | Sprint Title                                                       | Status   |
+|---------|--------------------------------------------------------------------|----------|
+| 2.1     | [Combining Seeded Data with API Reference Content (UI Testing)](https://github.com/d2d-weizhi/satori-pagebuilder-docs/blob/main/docs/sprints/sprint-2.0.md#session-21-combining-seeded-data-with-api-reference-content-ui-testing)    | Done     |
 | 1.0     | [Laying the Groundwork for Docs Portal](/docs/sprints/sprint-1.0.md#laying-the-groundwork-for-docs-portal) | Done     |
