@@ -19,9 +19,9 @@ export default async function InterfaceDetailPage({ params }: { params: { slug: 
   const relatedEntities = await getRelatedEntitiesForEntity(iface.id);
 
   return (
-    <div className="flex flex-row w-full py-12 gap-6">
+    <div className="flex flex-row w-full gap-6">
       {/* Main Content Area */}
-      <div className="flex-1">
+      <div className="flex-1 p-6">
         {/* Breadcrumb */}
         <nav className="mb-6 text-sm text-gray-500">
           <Link href="/api-reference" className="hover:underline">API Reference</Link>
@@ -66,7 +66,7 @@ export default async function InterfaceDetailPage({ params }: { params: { slug: 
       </div>
 
       {/* Right Sidebar */}
-      <aside className="w-[200px] pl-4 pr-2 border-l border-gray-200 dark:border-neutral-800">
+      <aside className="w-[200px] min-h-screen pl-4 pr-2 py-6 border-l border-gray-200 dark:border-neutral-800">
         <h3 className="text-xs font-bold text-gray-500 uppercase mb-2 tracking-widest">See also:</h3>
         <ul className="space-y-1">
           {relatedEntities.length > 0 ? (

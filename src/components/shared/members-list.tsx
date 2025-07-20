@@ -10,7 +10,12 @@ export function MembersList({ members }: { members: any[] }) {
       {members.map((member) => (
         <li key={member.name} className="border-l-4 pl-4 border-blue-400 bg-gray-50 dark:bg-neutral-900 py-2 rounded">
           <div className="flex items-center gap-2 mb-1">
-            <span className="font-mono text-lg font-semibold text-blue-800 dark:text-blue-300">{member.name}</span>
+            <span 
+              className="font-mono text-lg text-blue-800 dark:text-blue-300"
+              style={{
+                fontWeight: "600"
+              }}
+            >{member.name}</span>
             <span className="font-mono text-xs bg-gray-200 dark:bg-neutral-800 text-gray-600 dark:text-gray-300 px-2 py-0.5 rounded">
               {he.decode(member.type)}
             </span>

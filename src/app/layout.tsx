@@ -202,7 +202,7 @@ export default function RootLayout({
             </nav>
           </aside>
           {/* Content Area */}
-          <main className="flex-1 h-screen overflow-y-auto flex flex-col items-stretch px-8 py-10 bg-white">
+          <main className="flex-1 overflow-y-auto flex flex-col items-stretch bg-white">
             {children}
           </main>
         </div>

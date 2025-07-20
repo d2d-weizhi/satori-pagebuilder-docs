@@ -59,6 +59,12 @@
 - Added the `he.code()` for the individual member's types because some of them have HTML special characters.
 - I tweaked the sidebar `related_entities` so instead of an underline on hover, it will make the text `text-gray-300`.
 - I've set each member's name to `text-lg (18px)`.
+- Tweaked the interface detail page and main layout to ensure the content area and sidebar always fill the screen, regardless of the amount of content.
+- Made the sidebar “stick” visually with min-h-screen, so it always looks anchored—even on short pages.
+- Reworked the overall container structure to remove unnecessary width constraints. Content now adapts to any screen size, letting code examples and tables breathe without horizontal scrollbars.
+- Replaced “container-width” legacy patterns with a full-width, modern, dev-friendly approach.
+- Reflected on the frustration of using docs sites with cramped code blocks and excessive whitespace, and resolved to do better with Satori PageBuilder’s docs.
+- Wrapped up a focused, productive weekend sprint by prioritizing usability and developer experience—resulting in a portal that feels both personal and professional.
 
 *End of Sprint 2.1 Log.*
 
