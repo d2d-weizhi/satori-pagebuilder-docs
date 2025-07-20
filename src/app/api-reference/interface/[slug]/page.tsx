@@ -4,14 +4,12 @@ import he from "he";
 import Link from "next/link";
 import { MembersList } from "@/components/shared/members-list";
 
-interface InterfaceDetailPageProps {
-  params: {
-    slug: string;
-  };
-}
-
 /* eslint-disable  @typescript-eslint/no-explicit-any */
-export default async function InterfaceDetailPage({ params }: InterfaceDetailPageProps) {
+export default async function InterfaceDetailPage({
+  params,
+}: {
+  params: { slug: string }
+}) {
   const iface = await getInterfaceBySlug(params.slug);
 
   if (!iface) {
