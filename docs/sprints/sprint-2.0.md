@@ -56,6 +56,9 @@
 - Deferred MobX store/manager class seeding and advanced function/member integration to a future sprint.
 - **Note for future Next.js/Vercel deploys:**
   Use inline typing for route params in dynamic `page.tsx` components (e.g. `{ params: { slug: string } }`) instead of custom interface types. Vercel expects the props to match the App Router’s convention, otherwise you’ll get a type constraint error and builds may fail.
+- Added the `he.code()` for the individual member's types because some of them have HTML special characters.
+- I tweaked the sidebar `related_entities` so instead of an underline on hover, it will make the text `text-gray-300`.
+- I've set each member's name to `text-lg (18px)`.
 
 *End of Sprint 2.1 Log.*
 

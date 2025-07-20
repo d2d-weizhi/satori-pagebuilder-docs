@@ -76,7 +76,7 @@ export default async function InterfaceDetailPage({ params }: { params: { slug: 
                 <li key={rel.slug}>
                   <Link
                     href={`/api-reference/${cat}/${rel.slug}`}
-                    className="text-blue-600 hover:underline"
+                    className="text-blue-500 hover:text-gray-300"
                     title={`${rel.relationship} • ${rel.category}`}
                   >
                     {rel.name}

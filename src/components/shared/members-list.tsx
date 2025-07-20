@@ -8,11 +8,11 @@ export function MembersList({ members }: { members: any[] }) {
   return (
     <ul className="space-y-5">
       {members.map((member) => (
-        <li key={member.name} className="border-l-4 pl-4 border-blue-500 bg-gray-50 dark:bg-neutral-900 py-2 rounded">
+        <li key={member.name} className="border-l-4 pl-4 border-blue-400 bg-gray-50 dark:bg-neutral-900 py-2 rounded">
           <div className="flex items-center gap-2 mb-1">
-            <span className="font-mono font-semibold text-blue-800 dark:text-blue-300">{member.name}</span>
+            <span className="font-mono text-lg font-semibold text-blue-800 dark:text-blue-300">{member.name}</span>
             <span className="font-mono text-xs bg-gray-200 dark:bg-neutral-800 text-gray-600 dark:text-gray-300 px-2 py-0.5 rounded">
-              {member.type}
+              {he.decode(member.type)}
             </span>
             {member.required && (
               <span className="text-xs text-green-700 bg-green-50 dark:bg-green-900 px-2 py-0.5 rounded ml-2 font-medium">required</span>
