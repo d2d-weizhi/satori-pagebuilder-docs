@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { Roboto, Roboto_Mono } from "next/font/google";
+import Link from "next/link";
+import { Roboto, Roboto_Mono, Recursive } from "next/font/google";
 import "./globals.css";
 
 const robotoSans = Roboto({
@@ -25,12 +26,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link href="https://fonts.googleapis.com/css2?family=Recursive&display=swap" rel="stylesheet"></link>
+      </head>
       <body
         className={`${robotoSans.variable} ${robotoMono.variable} antialiased bg-gray-50 dark:bg-neutral-950`}
       >
-        <div className="min-h-screen flex flex-row">
+        <div className="h-screen flex flex-row">
           {/* Sidebar */}
-          <aside className="w-[300px] bg-white dark:bg-neutral-900 border-r border-gray-200 dark:border-neutral-800 flex flex-col items-center py-6 px-4 gap-6">
+          <aside className="w-[300px] h-screen bg-white dark:bg-neutral-900 border-r border-gray-200 dark:border-neutral-800 flex flex-col items-center py-6 px-4 gap-6 overflow-hidden">
             {/* Logo (put your lotus SVG here, or temporary text) */}
             <div className="flex items-center justify-center gap-4">
               {/* Logo (spans two rows) */}
@@ -121,15 +125,15 @@ export default function RootLayout({
                 >
                   Components
                 </a>
-                <a 
-                  href="#" 
+                <Link 
+                  href="/api-reference/interface"
                   className="block px-3 py-2 rounded hover:bg-gray-100 dark:hover:bg-neutral-800 font-medium text-gray-800 dark:text-gray-100"
                   style={{
                     letterSpacing: "1px"
                   }}
                 >
                   Interfaces
-                </a>
+                </Link>
                 <a 
                   href="#" 
                   className="block px-3 py-2 rounded hover:bg-gray-100 dark:hover:bg-neutral-800 font-medium text-gray-800 dark:text-gray-100"
@@ -198,7 +202,7 @@ export default function RootLayout({
             </nav>
           </aside>
           {/* Content Area */}
-          <main className="flex-1 flex flex-col items-stretch px-8 py-10 bg-white">
+          <main className="flex-1 h-screen overflow-y-auto flex flex-col items-stretch px-8 py-10 bg-white">
             {children}
           </main>
         </div>
