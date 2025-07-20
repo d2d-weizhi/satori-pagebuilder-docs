@@ -54,6 +54,8 @@
 - Adopted Recursive font for all code/monospace elements.
 - Confirmed that layout and content are robust on all screen sizes and zoom levels.
 - Deferred MobX store/manager class seeding and advanced function/member integration to a future sprint.
+- **Note for future Next.js/Vercel deploys:**
+  Use inline typing for route params in dynamic `page.tsx` components (e.g. `{ params: { slug: string } }`) instead of custom interface types. Vercel expects the props to match the App Router’s convention, otherwise you’ll get a type constraint error and builds may fail.
 
 *End of Sprint 2.1 Log.*
 

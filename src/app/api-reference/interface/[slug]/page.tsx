@@ -5,11 +5,7 @@ import Link from "next/link";
 import { MembersList } from "@/components/shared/members-list";
 
 /* eslint-disable  @typescript-eslint/no-explicit-any */
-export default async function InterfaceDetailPage({
-  params,
-}: {
-  params: { slug: string }
-}) {
+export default async function InterfaceDetailPage({ params }: { params: { slug: string } }) {
   const iface = await getInterfaceBySlug(params.slug);
 
   if (!iface) {
