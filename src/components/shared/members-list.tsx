@@ -1,5 +1,6 @@
 import he from "he";
 
+/* eslint-disable  @typescript-eslint/no-explicit-any */
 export function MembersList({ members }: { members: any[] }) {
   if (!members || members.length === 0) {
     return <div className="text-sm text-gray-500 italic">No members documented.</div>;
